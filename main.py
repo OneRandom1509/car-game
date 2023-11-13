@@ -2,9 +2,44 @@ from time import sleep
 import random
 from random import randrange
 
-a=1
-while True:
+def player1():
+    s1 = 0
+    timePassed1 = 0
 
+    while (s1 < distance):
+        s1 += random.randrange(0,3)
+        print('Player 1: ' + ' ' * s1 + '>' + ' ' * (distance - s1) + '|', end = '\r')
+        timePassed1 += 1
+        sleep(1)
+    print('\n')
+    return(timePassed1, s1)
+
+def player2():
+    s2 = 0
+    timePassed2 = 0
+
+    while (s2 < distance):
+        s2 += random.randrange(0,3)
+        print('Player 2: ' + ' ' * s2 + '>' + ' ' * (distance - s2) + '|', end = '\r')
+        timePassed2 += 1
+        sleep(1)           
+    print('\n')  
+    return(timePassed2, s2)
+def player3():
+    s3 = 0
+    timePassed3 = 0
+    
+    while (s3 < distance):
+        s3 += random.randrange(0,3)
+        print('Player 3: ' + ' ' * s3 + '>' + ' ' * (distance - s3) + '|', end = '\r')
+        timePassed3 += 1
+        sleep(1)
+    print('\n')
+    return(timePassed3, s3)
+
+a=1
+
+while True:
     message = input("> ")
     message = message.lower()
     if message == 'help':
@@ -12,37 +47,7 @@ while True:
     elif message == 'start':
         distance = int(input("Enter the total distance of the race.\n> "))
     
-        def player1():
-            s1 = 0
-            timePassed1 = 0
-
-            while (s1 < distance):
-                s1 += random.randrange(0,3)
-                print('Player 1: ' + ' ' * s1 + '>' + ' ' * (distance - s1) + '|', end = '\r')
-                timePassed1 += 1
-                sleep(1)
-            print('\n')
-            return(timePassed1, s1)
-        def player2():
-            s2 = 0
-            timePassed2 = 0
-            while (s2 < distance):
-                s2 += random.randrange(0,3)
-                print('Player 2: ' + ' ' * s2 + '>' + ' ' * (distance - s2) + '|', end = '\r')
-                timePassed2 += 1
-                sleep(1)           
-            print('\n')  
-            return(timePassed2, s2)
-        def player3():
-            s3 = 0
-            timePassed3 = 0
-            while (s3 < distance):
-                s3 += random.randrange(0,3)
-                print('Player 3: ' + ' ' * s3 + '>' + ' ' * (distance - s3) + '|', end = '\r')
-                timePassed3 += 1
-                sleep(1)
-            print('\n')
-            return(timePassed3, s3)
+        
         timePassed1,s1 = player1()
         timePassed2,s2 = player2()
         timePassed3,s3 = player3()
