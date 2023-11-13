@@ -1,6 +1,5 @@
 from time import sleep
 import random
-from random import randrange
 
 def player1():
     s1 = 0
@@ -28,7 +27,7 @@ def player2():
 def player3():
     s3 = 0
     timePassed3 = 0
-    
+
     while (s3 < distance):
         s3 += random.randrange(0,3)
         print('Player 3: ' + ' ' * s3 + '>' + ' ' * (distance - s3) + '|', end = '\r')
@@ -37,7 +36,6 @@ def player3():
     print('\n')
     return(timePassed3, s3)
 
-a=1
 
 while True:
     message = input("> ")
