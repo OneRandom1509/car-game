@@ -24,6 +24,7 @@ def player2():
         sleep(1)           
     print('\n')  
     return(timePassed2, s2)
+
 def player3():
     s3 = 0
     timePassed3 = 0
